@@ -1,0 +1,30 @@
+<div class="row container">
+  <div class="col-9">
+    <h1>Input</h1>
+    <p>Input (in|ex)clusion criteria to filter and grade records below. Add individual 
+    input one at a time, or input multiple items at once, separating each item with a comma. To update 
+    individual items, add changes and then click update. To remove a single item, click remove. To clear 
+    all inclusion criteria, click remove all in the appropriate column. To clear all exclusion criteria, 
+    click remove all in the appropriate column. To clear all input, click clear all.</p>
+    <form [formGroup]="form" (ngSubmit)="submit(form.value)">
+      <div class="row">
+        <div class="col-6">
+          <label for="inclusion">Inclusion criteria:</label>
+          <input type="text" class="field" id="inclusion" [formControl]="form.controls['inclusion']">
+        </div>
+        <div class="col-6">
+          <label for="exclusion">Exclusion criteria:</label>
+          <input type="text" class="field" id="exclusion" [formControl]="form.controls['exclusion']">
+        </div>
+      </div>
+      <div class="row">
+        <label for="included">Inputted inclusion:</label>
+        <input value="{{inList}}" placeholder="None" type="text" id="included">
+        <label for="excluded">Inputted exclusion:</label>
+        <input value="{{exList}}" placeholder="None" type="text" id="excluded">
+        <button type="button" (click)="clear()">Clear</button>
+        <button type="submit" [disabled]="!form.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

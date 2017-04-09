@@ -1,0 +1,12 @@
+.field {
+    padding: 3px 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #CBCBCB;
+}
+form {
+    background-color: #FFF;
+    border: 1px solid #CBCBCB;
+    margin: 30px 0;
+}
