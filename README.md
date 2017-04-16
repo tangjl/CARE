@@ -14,7 +14,21 @@ The instructions below will help you get the system up and running. Note: instru
 * PyMongo 3.4+
 * Angular CLI 1.0+
 
-Records should be formatted as XML files and stored within the records directory.
+Records should be formatted as XML files and stored within the records directory. Note: records are formatted as such:
+
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <TEXT>
+    <![CDATA[
+      Some medical information here.
+    ]]>
+  </TEXT>
+  <TAGS>
+    Some tags here.
+  </TAGS>
+</root>
+```
 
 ### Installation
 
