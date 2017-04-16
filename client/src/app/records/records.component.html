@@ -1,7 +1,7 @@
 <div class="row container">
   <div class="col-9">
     <h1>Records</h1>
-    <p>The records below are ranked, with concepts based on input highlighted in green.
+    <p>The records below are ranked, with concepts based on input highlighted in yellow.
     Ranking is based off the grade. Click on each record in the table to see more details.</p>
     <table>
       <tr class="table-header">
@@ -14,7 +14,7 @@
       [ngClass]="{odd: odd, even: even}" class="middle" [class.active]="record === selectedRecord">
         <td class="rank">{{i+1}}</td>
         <td class="name">{{record.name}}</td>
-        <td class="content" [innerHTML]="record.content | ellipsis: 200"></td>
+        <td class="content" [innerHTML]="record.content | ellipsis: 90"></td>
         <td class="grade">{{record.grade}}</td>
       </tr>
       <tr class="table-footer">

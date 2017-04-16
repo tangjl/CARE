@@ -20,7 +20,7 @@
             [(ngModel)]="record.name" [formControl]="editForm.controls['editName']">
           </div>
           <div class="col-8">
-            <span *ngIf="!record.editMode" [innerHTML]="record.content | ellipsis: 200"></span>
+            <span *ngIf="!record.editMode" [innerHTML]="record.content | ellipsis: 90"></span>
             <textarea *ngIf="record.editMode" class="field-2" id="editContent" 
             [(ngModel)]="record.content" [formControl]="editForm.controls['editContent']"></textarea>
           </div>
