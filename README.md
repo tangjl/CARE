@@ -111,4 +111,24 @@ Then navigate to the client directory and run the following command:
 ng serve
 ```
 
-At this point, the system should be up and running and ready to use. 
+At this point, the system should be up and running and ready to use. Navigate to `http://localhost:4200` in your browser and you should see the working application.
+
+## Using the System
+
+The web interface is divided into four pages: input, about, records, and manager. 
+
+### Input
+
+The user should use the input component to submit their inclusion/exclusion criteria. More details can be found within the page.
+
+### About
+
+This component contains more information about the system including some more details on the project background.
+
+### Records
+
+Once the user has submitted their criteria in the input page, this component displays the results of their query back to them in a table ordered by ranked (dependent on a grade). Each record within the table can be clicked for more details.
+
+### Manager
+
+The manager component was built simply to make it easier for the user to add, view, delete, and update records to the system without having to go outside of the app. It is meant for less technologically advanced users.  
