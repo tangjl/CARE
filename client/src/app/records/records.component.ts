@@ -17,7 +17,6 @@ export class RecordsComponent implements OnInit {
   ngOnInit() {
     this.getRecords();
   }
-  
 
   getRecords() {
     this.manageRecordsService.getRecords()
@@ -40,4 +39,7 @@ export class RecordsComponent implements OnInit {
     this.selectedRecord = record;
   }
 
+  replaceAll(content: string) {
+    return content.replace(/<br>|<mark>|<\/mark>/g, ' ');
+  }
 }

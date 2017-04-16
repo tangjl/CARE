@@ -104,4 +104,8 @@ export class ManagerComponent implements OnInit {
     })
   }
 
+  replaceAll(content: string) {
+    return content.replace(/<br>|<mark>|<\/mark>/g, ' ');
+  }
+
 }
