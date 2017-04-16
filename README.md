@@ -30,7 +30,10 @@ Records should be formatted as XML files and stored within the records directory
 </root>
 ```
 
-### Installation
+### Checking Out
+To check out the latest release:
+
+`git clone https://github.com/tangjl/CARE`
 
 ### Setting Up
 
