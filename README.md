@@ -62,17 +62,53 @@ collection = db.records <<< see above
 Then alter the path directory to the folder containing the records stored within the `/records` directory (By default: the path containing the records is `/records/raw_records/`).  
 
 ```python
-for root, dirnames, files in os.walk('./raw_records'):
+for root, dirnames, files in os.walk('./raw_records'): <<< edit the path if necessary
     for name in files:
         dbName = name.replace('.xml', '')
-        tree = ET.parse('./raw_records/' + name)
+        tree = ET.parse('./raw_records/' + name) <<< see above
         root = tree.getroot()
 ```
 
 Navigate to the server directory. Within the `index.js` file, change the path to the database if you are not using the default port for MongoDB (27017).
 
 ```javascript
-mongoose.connect('mongodb://localhost/records');
+mongoose.connect('mongodb://localhost/records'); <<< edit this if necessary
 ```
 
+Change the default port as well if you want to as well.
+
+```javascript
+app.listen(4000, function() { <<< change the port number if necessary
+    console.log("Listening for connection");
+});
+```
+
+This next step is optional depending on if you changed the port above. Navigate to the client directory, then change directories into `/src/app/services` and open up `manage-records.service.ts`. Within the file, edit the port number if you decide to run the api on a different port then the default value (4000).
+
+```javascript
+private url = 'http://localhost:4000/api/records'; <<<edit the port number if necessary
+```
+
+You should now be set and ready to run the system. 
+
 ## Running the System
+
+To start, make sure that MongoDB is running in the background (`mongod` in whatever path you have set already during MongoDB installation). Then navigate to the records directory and run the following command:
+
+```
+python parser.py
+```
+
+The above command will parse through the records within the directory and automatically insert them into MongoDB. After that, navigate to the server directory and run the following command:
+
+```
+node index
+```
+
+Then navigate to the client directory and run the following command:
+
+```
+ng serve
+```
+
+At this point, the system should be up and running and ready to use. 
