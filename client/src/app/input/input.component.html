@@ -15,8 +15,8 @@
           <ul>
             <li *ngFor="let in of inArray; let i=index">
               <input #currentIn class="field-3" value={{in}} type="text">
-              <button class="smaller blue-button" type="button" (click)="updateTerm(currentIn.value, true, i)">Update</button>
-              <button class="smaller red-button" type="button" (click)="removeTerm(currentIn.value, true)">Remove</button>
+              <button class="blue-button-2" type="button" (click)="updateTerm(currentIn.value, true, i)">Edit</button>
+              <button class="smaller red-button" type="button" (click)="removeTerm(currentIn.value, true)">Del</button>
             </li>
           </ul>
           <label class="title-2" for="included">Inputted inclusion:</label>
@@ -29,8 +29,8 @@
           <ul>
             <li *ngFor="let ex of exArray; let i=index">
               <input #currentEx class="field-3" value={{ex}} type="text">
-              <button class="smaller blue-button" type="button" (click)="updateTerm(currentEx.value, false, i)">Update</button>
-              <button class="smaller red-button" type="button" (click)="removeTerm(currentEx.value, false)">Remove</button>
+              <button class="blue-button-2" type="button" (click)="updateTerm(currentEx.value, false, i)">Edit</button>
+              <button class="smaller red-button" type="button" (click)="removeTerm(currentEx.value, false)">Del</button>
             </li>
           </ul>
           <label class="title-2" for="excluded">Inputted exclusion:</label>

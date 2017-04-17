@@ -11,7 +11,7 @@ mark {
 .container {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 .red {
     color: #E64C3C;
@@ -25,6 +25,9 @@ mark {
 .yellow {
     color: #F5D14E;
 }
+h1 {
+    font-size: 18px;
+}
 h3 {
     margin-bottom: 5px;
 }
@@ -37,6 +40,9 @@ h3 {
 * {
     box-sizing: border-box;
 }
+p {
+    font-size: 14px;
+}
 .row::after {
     content: "";
     clear: both;
@@ -45,6 +51,10 @@ h3 {
 [class*="col-"] {
     float: left;
     width: 100%;
+}
+@media all and (min-width: 400px) {
+    p {font-size: 16px;}
+    h1 {font-size: 30px;}
 }
 @media all and (min-width: 800px) {
     .col-1 {width: 8.33%;}

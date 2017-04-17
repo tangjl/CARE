@@ -20,7 +20,7 @@
             [(ngModel)]="record.name" [formControl]="editForm.controls['editName']">
           </div>
           <div class="col-8">
-            <span *ngIf="!record.editMode">{{ replaceAll(record.content) | ellipsis: 150}}</span>
+            <span *ngIf="!record.editMode">{{ replaceAll(record.content) | ellipsis: 300}}</span>
             <textarea *ngIf="record.editMode" class="field-2" id="editContent" 
             [(ngModel)]="record.content" [formControl]="editForm.controls['editContent']"></textarea>
           </div>

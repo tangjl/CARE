@@ -21,7 +21,7 @@
     justify-content: center;
 }
 .recordForm {
-    width: 60%;
+    width: 90%;
     background-color: #FFF;
     padding: 0 20px 20px 20px;
     border: 1px solid #CBCBCB;
@@ -68,4 +68,7 @@ label {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+}
+@media all and (min-width: 400px) {
+
 }
